@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+  Copyright 2013 Google Inc. All Rights Reserved.
+  You may study, modify, and use this example for any purpose.
+  Note that this example is provided "as is", WITHOUT WARRANTY
+  of any kind either expressed or implied.
+ -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+                applicationComplete="init();"
+                backgroundColor="#FFFFFF"
+                width="450"
+                height="300"
+                layout="absolute">
+  <mx:Script>
+    <![CDATA[
+    import flash.media.Video;
+    import flash.system.Security;
+    import com.google.ads.ima.examples.sdk_integration.web.SdkIntegrationExampleFlex3;
+    import com.google.ads.ima.examples.sdk_integration.web.VideoPlayerFlex3;
+
+
+    private var videoPlayer:VideoPlayerFlex3;
+    private var sdkIntegration:SdkIntegrationExampleFlex3;
+
+    private function init():void {
+      Security.allowDomain("*");
+      videoPlayer = new VideoPlayerFlex3(new Video(),
+                                         videoPlaceholder,
+                                         playheadContainer,
+                                         playhead,
+                                         playButton,
+                                         requestLinearAdsButton,
+                                         requestNonLinearAdsButton);
+      sdkIntegration = new SdkIntegrationExampleFlex3(videoPlayer);
+    }
+    ]]>
+  </mx:Script>
+  <mx:VBox>
+    <mx:HBox>
+      <mx:VBox verticalGap="0">
+        <mx:Container width="450" height="250" backgroundColor="#000000">
+            <mx:UIComponent id="videoPlaceholder" width="450" height="250"/>
+        </mx:Container>
+        <mx:HBox id="playheadContainer" width="450" height="5"
+            backgroundColor="#ffffff">
+            <mx:Box id="playhead" width="0" height="5"
+                backgroundColor="#000000"/>
+        </mx:HBox>
+        <mx:HBox paddingLeft="10" paddingRight="10" paddingTop="10">
+          <mx:Button width="100" label="Linear ad" id="requestLinearAdsButton"/>
+          <mx:Button width="120" label="Non-linear ad"
+             id="requestNonLinearAdsButton"/>
+          <mx:Button width="100" label="Play" id="playButton"/>
+        </mx:HBox>
+      </mx:VBox>
+    </mx:HBox>
+  </mx:VBox>
+</mx:Application>

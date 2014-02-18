@@ -1,0 +1,44 @@
+/**
+ * Copyright 2012 Google Inc. All Rights Reserved.
+ * You may study, modify, and use this example for any purpose.
+ * Note that this example is provided "as is", WITHOUT WARRANTY
+ * of any kind either expressed or implied.
+ */
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.logo {
+  background: url("logo.png") repeat scroll 0 0 transparent;
+  background-repeat: no-repeat;
+  padding-left: 150px;
+  height: 60px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.topnav {
+  background-color: #dcf6db;
+  border-top: 1px solid #090;
+}
+
+.topnav h2 {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+
+.note {
+  margin: 10px;
+  background-color: #fff9ca;
+  padding: 5px;
+  border: 1px #ccc solid;
+  width:500px;
+}
+
+.footer {
+  color: #ccc;
+  font-size: 10px;
+  margin-top: 20px;
+}
