@@ -42,39 +42,27 @@
             src="http://www.googletagservices.com/tag/js/gpt.js">
     </script>
 
-    <script type="text/javascript">
-      // Add HTML companions via googletag.defineUnit and then attach
-      // services to units.
-      // adSlot1 adds both companion and content service in order to
-      // show custom HTML in the unit.
-      adSlot1 = googletag.defineUnit(
-          '/4180/stage.tvnz.co.nz',
-          [728, 90],
-          'companionDiv1');
-      adSlot1.addService(googletag.companionAds());
-      adSlot1.addService(googletag.content());
-      // adSlot2 uses only the companions service.
-      adSlot2 = googletag.defineSlot(
-          '/6062/video-demo',
-          [300, 250],
-          'companionDiv2');
-      adSlot2.addService(googletag.companionAds());
-      // Load companion ads service synchronously.
-      googletag.companionAds().enableSyncLoading();
-      googletag.enableServices();
-    </script>
+    <script type='text/javascript'>
+       googletag.cmd.push(function() {
+         // Supply YOUR_PRELOAD_NETWORK and YOUR_PRELOAD_UNIT_PATH.
+         googletag.defineSlot('/4180/stage.tvnz.co.nz', [728, 90], 'companionDiv1')
+             .addService(googletag.companionAds())
+             .addService(googletag.pubads());
+         googletag.companionAds().setRefreshUnfilledSlots(true);
+         googletag.pubads().enableVideoAds();
+         googletag.enableServices();
+       });
+     </script>
 
     <!-- It is not required to specify the size of the slot in the HTML, but
          the user experience is worse when parts of page suddenly jump and
          content shifts. -->
     <div id="companionDiv1" style="width:728px; height:90px;">
-      <script type="text/javascript">
-        // Display HTML in the slot.
-        googletag.content().setContent(
-            adSlot1,
-            '<img src="initialcontent728x90ad.JPG">');
-        googletag.display('companionDiv1');
-      </script>
+      <script type='text/javascript'>
+    googletag.cmd.push(function() {
+      googletag.display('companionDiv1');
+    });
+    </script>
     </div>
 
 
