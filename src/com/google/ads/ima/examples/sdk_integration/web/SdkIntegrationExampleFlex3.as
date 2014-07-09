@@ -130,6 +130,7 @@ package com.google.ads.ima.examples.sdk_integration.web {
       // Get a reference to the AdsManager object through the event object.
       adsManager = event.getAdsManager(contentPlayhead, adsRenderingSettings);
       if (adsManager) {
+		trace("adsManager");
         // Add required ads manager listeners.
         // ALL_ADS_COMPLETED event will fire once all the ads have played. There
         // might be more than one ad played in the case of ad pods and VMAP.
@@ -162,6 +163,7 @@ package com.google.ads.ima.examples.sdk_integration.web {
         DisplayObjectContainer(videoPlayer.videoDisplay.parent).addChild(
             adsManager.adsContainer);
         // Start the ad playback.
+        trace("start");
         adsManager.start();
       }
     }
@@ -229,6 +231,7 @@ package com.google.ads.ima.examples.sdk_integration.web {
      * The AdsManager raises this event when the ad has started.
      */
     private function startedHandler(event:AdEvent):void {
+	  trace("started1");
       if (!event.ad) {
         return;
       }
