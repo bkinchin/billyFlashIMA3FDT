@@ -129,6 +129,7 @@ package com.google.ads.ima.examples.sdk_integration.web {
 
       // Get a reference to the AdsManager object through the event object.
       adsManager = event.getAdsManager(contentPlayhead, adsRenderingSettings);
+	  trace("adsM"+adsManager);
       if (adsManager) {
 		trace("adsManager");
         // Add required ads manager listeners.
