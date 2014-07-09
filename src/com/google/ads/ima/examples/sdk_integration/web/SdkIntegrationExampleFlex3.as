@@ -175,6 +175,7 @@ package com.google.ads.ima.examples.sdk_integration.web {
      * if there's an error loading ads.
      */
     private function adsLoadErrorHandler(event:AdErrorEvent):void {
+	  trace("billyerro1");
       trace("warning", "Ads load error: " + event.error.errorMessage);
       videoPlayer.play();
     }
@@ -185,6 +186,7 @@ package com.google.ads.ima.examples.sdk_integration.web {
      * are no more ads to display.
      */
     private function adsManagerPlayErrorHandler(event:AdErrorEvent):void {
+	  trace("billyerrow");
       trace("warning", "Ad playback error: " + event.error.errorMessage);
     }
 
