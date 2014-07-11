@@ -108,7 +108,6 @@ package com.google.ads.ima.examples.sdk_integration.web {
         adsLoader.addEventListener(AdsManagerLoadedEvent.ADS_MANAGER_LOADED,
                                    adsManagerLoadedHandler);
         adsLoader.addEventListener(AdErrorEvent.AD_ERROR, adsLoadErrorHandler);
-		requestAds(LINEAR_AD_TAG);
       }
     }
 
