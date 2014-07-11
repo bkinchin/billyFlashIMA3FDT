@@ -25,11 +25,12 @@ package com.google.ads.ima.examples.sdk_integration.web {
         "http://rmcdn.2mdn.net/Demo/vast_inspector/android.flv";
 
     private static const LINEAR_AD_TAG:String =
-        "http://pubads.g.doubleclick.net/gampad/ads?sz=400x300&" +
-        "iu=%2F6062%2Fiab_vast_samples&ciu_szs=300x250%2C728x90&impl=s&" +
-        "gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&" +
-        "url=[referrer_url]&correlator=[timestamp]&" +
-        "cust_params=iab_vast_samples%3Dlinear";
+        "http://pubads.g.doubleclick.net/gampad/ads?env=vp&gdfp_req=1&impl=s&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]&iu=/4180/stage.tvnz.co.nz&sz=640x480&ad_rule=0&cust_params=chanl%3Dtvnz-online%26&ciu_szs=728x90";
+		//"http://pubads.g.doubleclick.net/gampad/ads?sz=400x300&" +
+        //"iu=%2F6062%2Fiab_vast_samples&ciu_szs=300x250%2C728x90&impl=s&" +
+        //"gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&" +
+        //"url=[referrer_url]&correlator=[timestamp]&" +
+        //"cust_params=iab_vast_samples%3Dlinear";
 
     private static const NONLINEAR_AD_TAG:String =
         "http://pubads.g.doubleclick.net/gampad/ads?sz=400x300&" +
