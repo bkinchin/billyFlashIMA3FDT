@@ -18,7 +18,7 @@
     <script type='text/javascript'>
        googletag.cmd.push(function() {
          // Supply YOUR_PRELOAD_NETWORK and YOUR_PRELOAD_UNIT_PATH.
-         googletag.defineSlot('/4180/stage.tvnz.co.nz', [728, 90], 'companionDiv1')
+         var adSlot = googletag.defineSlot('/4180/stage.tvnz.co.nz', [728, 90], 'companionDiv1')
              .addService(googletag.companionAds())
              .addService(googletag.pubads())
              .addService(googletag.content());
@@ -62,10 +62,10 @@
          content shifts. -->
     <div id="companionDiv1" style="width:728px; height:90px;">
       <script type='text/javascript'>
-    //googletag.cmd.push(function() {
-      //googletag.display('companionDiv1');
-    //});
-    googletag.display('companionDiv1');
+    googletag.cmd.push(function() {
+      googletag.display('companionDiv1');
+    });
+    //googletag.display('companionDiv1');
     </script>
     </div>
 
