@@ -18,7 +18,7 @@
     <script type='text/javascript'>
        googletag.cmd.push(function() {
          // Supply YOUR_PRELOAD_NETWORK and YOUR_PRELOAD_UNIT_PATH.
-         var adSlot = googletag.defineSlot('/4180/stage.tvnz.co.nz', [728, 90], 'companionDiv1')
+         /*var adSlot = googletag.defineSlot('/4180/stage.tvnz.co.nz', [728, 90], 'companionDiv1')
              .addService(googletag.companionAds())
              .addService(googletag.pubads())
              .addService(googletag.content());
@@ -27,7 +27,13 @@
          googletag.companionAds().setRefreshUnfilledSlots(true);
          googletag.pubads().enableVideoAds();
          googletag.enableServices();
-       });
+       });*/
+         var adUnit = googletag.defineSlot('/4180/stage.tvnz.co.nz', [728, 90], 'companionDiv1')
+          .addService(googletag.companionAds())
+          .addService(googletag.content());
+         googletag.content().setContent(adUnit,'<h2>Custom content in ad slot.</h2>');
+         googletag.companionAds().enableSyncLoading();
+         googletag.enableServices();
      </script>
   </head>
 
