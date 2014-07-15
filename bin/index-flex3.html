@@ -61,6 +61,8 @@
       adSlot2.addService(googletag.companionAds());
       // Load companion ads service synchronously.
       googletag.companionAds().enableSyncLoading();
+      googletag.companionAds().setRefreshUnfilledSlots(true);
+      googletag.pubads().enableVideoAds();
       googletag.enableServices();
     </script>
 
