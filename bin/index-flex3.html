@@ -61,8 +61,6 @@
       adSlot2.addService(googletag.companionAds());
       // Load companion ads service synchronously.
       googletag.companionAds().enableSyncLoading();
-      googletag.companionAds().setRefreshUnfilledSlots(true);
-      googletag.pubads().enableVideoAds();
       googletag.enableServices();
     </script>
 
@@ -75,6 +73,8 @@
         googletag.content().setContent(
             adSlot1,
             '<img src="initialcontent728x90ad.JPG">');
+        googletag.companionAds().setRefreshUnfilledSlots(true);
+        googletag.pubads().enableVideoAds();
         googletag.display('companionDiv1');
       </script>
     </div>
